@@ -1,0 +1,114 @@
+*{
+    border:border-box;
+    margin:0px;
+    padding: 0px;
+    text-align: center;
+    font-size: 30px;
+}
+
+main{
+    min-width: fit-content ;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: aquamarine;
+    flex-direction: column;
+    flex-shrink: 1;
+    flex-grow: 1;
+
+}
+
+h1{
+    max-width: 250px;
+    max-height: 90px;
+    min-width: 242px;
+    min-height: 70px;
+    font-weight: 550;
+    margin: 20px;
+    font-size: 30px;
+    color:#512222;
+    border: 10px solid #512222;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 1;
+    flex-grow: 1;
+}
+
+#container{
+    width: 70vw;
+    height: 70vw;
+    min-width: 250px; ;
+    min-height: 250px ;
+    max-width:609px;
+    max-height: 609px;
+    margin: 20px;
+    flex-wrap: wrap;
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-shrink: 1;
+    flex-grow: 1;
+
+    
+}
+
+.box{
+    height: 30%;
+    width: 30%;
+    margin: 4px;
+    border-radius: 20px;
+    box-shadow: 4px 4px 10px teal, -4px -4px 10px teal;
+    font-size: 80px;
+    background-color: rgb(179, 255, 0);
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-shrink: 1;
+    flex-grow: 1;
+}
+
+#btnHolder{
+    display: flex;
+    flex-shrink: 1;
+    flex-grow: 2;
+}
+
+#winner{
+    width: 300px;
+    height: 100px;
+    min-width: 242px;
+    font-weight: 550;
+    margin-top: 20px;
+    font-size: 40px;
+    color:#512222;
+    border: 10px solid #512222;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    flex-shrink: 1;
+    flex-grow: 1;
+    
+}
+
+.hidden{
+    visibility: hidden;
+}
+
+button{
+    height: 100px;
+    width: 100px;
+    border: 2px solid #512222;
+    color: white;
+    background-color: #512222;
+    border-radius: 50%;
+    flex-shrink: 1;
+    flex-grow: 1;
+    font-size: 20px;
+    margin-left: 10px;
+}
