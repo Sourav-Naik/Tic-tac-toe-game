@@ -22,7 +22,7 @@ const winner =() => {
             {
                 a = pos1val;
                 console.log("winner");
-                win.innerText=`Congratulation ${a} is Winner`;
+                win.innerText=`Congratulation Player ${a} is Winner`;
                 contain.innerText = `Starting New Game...`;
                 contain.classList.add("hidden");
                 win.classList.remove("hidden");
