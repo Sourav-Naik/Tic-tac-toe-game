@@ -1,6 +1,5 @@
 let boxes = document.querySelectorAll(".box");
 let reset = document.querySelector("#reset");
-let new_ = document.querySelector("#new");
 let win =  document.querySelector("#winner");
 let contain = document.querySelector("#container");
 let a = "result";
@@ -20,15 +19,17 @@ const winner =() => {
            if(
             (pos1val==="X"&&pos2val==="X"&&pos3val==="X")||(pos1val==="O"&&pos2val==="O"&&pos3val==="O")
             )
-                {
+            {
                 a = pos1val;
                 console.log("winner");
                 win.innerText=`Congratulation ${a} is Winner`;
                 contain.innerText = `Starting New Game...`;
                 contain.classList.add("hidden");
                 win.classList.remove("hidden");
-                }
-        };
+                reset.innerText = "New Game";
+                
+            }
+        }
     }
 
 }
@@ -49,36 +50,25 @@ boxes.forEach((box) => {
         }
         box.disabled = true;
         i++;
+        if (i===9){
+            reset.innerText="New Game";
+        }
         winner();
+        console.log(i);
     } );
    
 });
 
 
+
 const res = () =>{
-    for(let pattern of winPattern){
-        boxes[pattern[0]].innerText ="";
-        boxes[pattern[1]].innerText ="";
-        boxes[pattern[2]].innerText ="";   
-        boxes[pattern[0]].disabled = false;
-        boxes[pattern[1]].disabled = false;
-        boxes[pattern[2]].disabled = false;
-    }
+    
+       contain.classList.remove("hidden");
+        win.classList.add("hidden");
+        i = 0;
+        location.reload();
     turnX = true;
      
 }
 
-let newGame =() =>{
-
-    contain.classList.remove("hidden");
-    win.classList.add("hidden");
-    if(contain.innerText===`Starting New Game...`||i===9){
-        i = 0;
-        location.reload();
-     
-     }
-}
-
 reset.addEventListener("click",res);
-
-new_.addEventListener("click",newGame);
